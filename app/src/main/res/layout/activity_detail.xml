@@ -135,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="80dp"
         android:layout_gravity="end"
         app:isTrigger="true"
         app:CollapsingId="@id/collapsing_diagonal"
