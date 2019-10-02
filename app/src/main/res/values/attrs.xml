@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlexLayout">
+        <attr name="partMain" format="integer|reference" />
+        <attr name="partSlave" format="integer|reference" />
+    </declare-styleable>
+    <declare-styleable name="RoundLayout">
+        <attr name="round_radius" format="dimension|reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        android:focusableInTouchMode="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="4dp"
+        android:background="@drawable/background_round_white"
+        tools:ignore="UnusedAttribute,UselessParent">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            style="@style/TextContent.Small"
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/type_something"
+            android:inputType="text"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:singleLine="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="6dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#bdbdbd"
+            android:imeOptions="actionSearch"
+            android:gravity="center_vertical|start"
+            android:layout_gravity="center_vertical|start"
+            android:textCursorDrawable="@null"/>
+
+    </LinearLayout>
+
+</FrameLayout>

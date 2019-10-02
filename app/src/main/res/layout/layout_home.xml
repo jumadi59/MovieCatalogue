@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.cumacoding.collapsingdiagonal.DiagonalLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_diagonal_home"
+        android:background="@color/colorPrimary"
+        app:di_position="bottom_right"
+        app:di_overlap="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_upcoming"
+        style="@style/TextContent.Bold"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/title_upcoming"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/see_more_up_coming"
+        style="@style/TextContent.Small2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_more_white_selector"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="4dp"
+        android:text="@string/see_more"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_upcoming"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_upcoming"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_upcoming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/height_upcoming"
+        android:layout_marginTop="8dp"
+        android:isScrollContainer="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_upcoming"
+        tools:itemCount="1"
+        tools:listitem="@layout/layout_item_upcoming" />
+
+    <TextView
+        android:id="@+id/tv_category"
+        style="@style/TextContent.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_upcoming" />
+
+    <TextView
+        android:id="@+id/see_more"
+        style="@style/TextContent.Small2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_more_selector"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="4dp"
+        android:text="@string/see_more"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_category"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <LinearLayout
+        android:id="@+id/linear_category"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_category">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/action"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_btn_icon_selector"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_action"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txt_name_action"
+                style="@style/TextContent.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:text="@string/genre_action" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comedy"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_btn_icon_selector"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_comedy"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txt_name_comedy"
+                style="@style/TextContent.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:text="@string/genre_comedy" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/horror"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_btn_icon_selector"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_horror"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txt_name_horror"
+                style="@style/TextContent.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:text="@string/genre_horror" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/romance"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_btn_icon_selector"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_romance"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txt_name_romance"
+                style="@style/TextContent.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:text="@string/genre_romance" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.3" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_discover"
+        style="@style/TextContent.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="@dimen/margin_vertical"
+        android:layout_marginEnd="@dimen/margin_horizontal"
+        android:text="@string/title_discover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_category" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

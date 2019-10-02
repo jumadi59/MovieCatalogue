@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="id_icon_genres">
+        <item>@drawable/ic_adventure</item>
+        <item>@drawable/ic_fantasy</item>
+        <item>@drawable/ic_animation</item>
+        <item>@drawable/ic_drama</item>
+        <item>@drawable/ic_horror</item>
+        <item>@drawable/ic_action</item>
+        <item>@drawable/ic_comedy</item>
+        <item>@drawable/ic_history</item>
+        <item>@drawable/ic_western</item>
+        <item>@drawable/ic_thriller</item>
+        <item>@drawable/ic_crime</item>
+        <item>@drawable/ic_documentary</item>
+        <item>@drawable/ic_science_fiction</item>
+        <item>@drawable/ic_mystery</item>
+        <item>@drawable/ic_music</item>
+        <item>@drawable/ic_romance</item>
+        <item>@drawable/ic_family</item>
+        <item>@drawable/ic_war</item>
+        <item>@drawable/ic_tv_movie</item>
+    </integer-array>
+
+    <string-array name="name_icon_genres">
+        <item>Adventure</item>
+        <item>Fantasy</item>
+        <item>Animation</item>
+        <item>Drama</item>
+        <item>Horror</item>
+        <item>Action</item>
+        <item>Comedy</item>
+        <item>History</item>
+        <item>Western</item>
+        <item>Thriller</item>
+        <item>Crime</item>
+        <item>Documentary</item>
+        <item>Science Fiction</item>
+        <item>Mystery</item>
+        <item>Music</item>
+        <item>Romance</item>
+        <item>Family</item>
+        <item>War</item>
+        <item>TV Movie</item>
+    </string-array>
+
+    <string-array name="region_entries">
+        <item>English</item>
+        <item>Indonesia</item>
+        <item>China</item>
+        <item>India</item>
+        <item>Japan</item>
+        <item>Korea</item>
+    </string-array>
+
+    <string-array name="region_values">
+        <item>US</item>
+        <item>ID</item>
+        <item>CN</item>
+        <item>IN</item>
+        <item>JP</item>
+        <item>KP</item>
+    </string-array>
+</resources>

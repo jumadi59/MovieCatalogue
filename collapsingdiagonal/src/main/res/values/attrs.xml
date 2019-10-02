@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CollapsingDiagonalLayout">
+        <attr name="di_position">
+            <flag name="bottom_left" value="1" />
+            <flag name="bottom_right" value="2" />
+        </attr>
+        <attr name="di_overlap" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CollapsingBehavior">
+        <attr name="CollapsingId" format="integer|reference" />
+        <attr name="isTrigger" format="boolean" />
+    </declare-styleable>
+</resources>

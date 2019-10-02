@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="margin_vertical">8dp</dimen>
+    <dimen name="margin_horizontal">8dp</dimen>
+    <dimen name="round_radius_size">8dp</dimen>
+
+    <dimen name="margin_vertical_x">16dp</dimen>
+    <dimen name="margin_horizontal_x">16dp</dimen>
+
+    <dimen name="height_backdrop">300dp</dimen>
+
+    <dimen name="width_poster_normal">100dp</dimen>
+    <dimen name="height_poster_normal">150dp</dimen>
+    <dimen name="margin_start_poster">110dp</dimen>
+
+    <dimen name="width_poster_big">120dp</dimen>
+    <dimen name="height_poster_big">160dp</dimen>
+
+    <dimen name="width_upcoming">280dp</dimen>
+    <dimen name="height_upcoming">145dp</dimen>
+    <dimen name="height_diagonal_home">210dp</dimen>
+
+</resources>

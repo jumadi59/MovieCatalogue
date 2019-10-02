@@ -1,0 +1,16 @@
+<vector android:height="24dp" android:viewportHeight="48"
+    android:viewportWidth="48" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00BCD4" android:pathData="M41.7,26.6c0,0 -8.6,-0.5 -14.2,-6.1S21.4,6.3 21.4,6.3s8.2,-3.1 15.7,4.5S41.7,26.6 41.7,26.6z"/>
+    <path android:fillColor="#607D8B" android:pathData="M42.3,42.9c-3,3 -13,-3.6 -23.3,-13.9S2.1,8.7 5.1,5.7S22,2.5 33.7,14.3S45.3,39.9 42.3,42.9z"/>
+    <path android:fillColor="#78909C" android:pathData="M4.9934,5.7791a26.2997,8.7999 45,1 0,37.1935 37.1935a26.2997,8.7999 45,1 0,-37.1935 -37.1935z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M13.3028,14.5228a14.2999,4.8 45,1 0,20.2231 20.2231a14.2999,4.8 45,1 0,-20.2231 -20.2231z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M26.7731,18.9792a1.6,0.5 45,1 0,2.2627 2.2627a1.6,0.5 45,1 0,-2.2627 -2.2627z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M17.4757,28.2851a1.6,0.5 45,1 0,2.2627 2.2627a1.6,0.5 45,1 0,-2.2627 -2.2627z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M36.8588,38.3884a0.5,1.6 135,1 0,2.2627 2.2627a0.5,1.6 135,1 0,-2.2627 -2.2627z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M8.1655,9.6861a0.5,1.6 135,1 0,2.2627 2.2627a0.5,1.6 135,1 0,-2.2627 -2.2627z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M16.6571,10.4573a0.5,1.6 135,1 0,2.2627 2.2627a0.5,1.6 135,1 0,-2.2627 -2.2627z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M36.8906,30.6017a0.5,1.6 135,1 0,2.2627 2.2627a0.5,1.6 135,1 0,-2.2627 -2.2627z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M9.6487,17.4367a0.5,1.6 135,1 0,2.2627 2.2627a0.5,1.6 135,1 0,-2.2627 -2.2627z"/>
+    <path android:fillColor="#26C6DA" android:pathData="M29.8822,37.5811a0.5,1.6 135,1 0,2.2627 2.2627a1.6,0.5 45,1 0,-2.2627 -2.2627z"/>
+    <path android:fillColor="#B2EBF2" android:pathData="M18.5542,17.1623a2.9,8.6999 135,1 0,12.3035 12.3035a2.9,8.6999 135,1 0,-12.3035 -12.3035z"/>
+</vector>

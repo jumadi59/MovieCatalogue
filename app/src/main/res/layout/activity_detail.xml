@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.cumacoding.collapsingdiagonal.CollapsingDiagonalLayout
+            android:id="@+id/collapsing_diagonal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_backdrop"
+            app:di_position="bottom_right"
+            app:di_overlap="90dp"
+            app:contentScrim="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:id="@+id/img_backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                android:background="@color/colorPrimary"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:fitsSystemWindows="true"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                <TextView
+                    android:id="@+id/title_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="65dp"
+                    style="@style/TextContent.titleToolbar"
+                    android:typeface="sans"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/app_name"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.cumacoding.collapsingdiagonal.CollapsingDiagonalLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        layout="@layout/content_detail" />
+
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/rotate_loading"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:loading_width="4dp"
+        app:behavior_overlapTop="100dp"
+        app:loading_color="@color/colorPrimary"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/content_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:behavior_overlapTop="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/txt_msg_error"
+            style="@style/TextContent.Bold"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_horizontal"
+            tools:text="@string/error_msg"/>
+
+        <Button
+            android:id="@+id/btn_try_again"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/tray_again"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_poster"
+        android:layout_width="@dimen/width_poster_big"
+        android:layout_height="@dimen/height_poster_big"
+        android:contentDescription="@string/poster_description"
+        android:elevation="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_loading"
+        android:layout_marginStart="10dp"
+        app:CollapsingId="@id/collapsing_diagonal"
+        app:layout_behavior="com.cumacoding.collapsingdiagonal.CollapsingBehavior"
+        tools:targetApi="lollipop"
+        tools:ignore="MissingPrefix" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="end"
+        app:isTrigger="true"
+        app:CollapsingId="@id/collapsing_diagonal"
+        app:layout_behavior="com.cumacoding.collapsingdiagonal.CollapsingBehavior"
+        app:rippleColor="@color/accent_bright"
+        app:srcCompat="@drawable/ic_favorite_border_white_24dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

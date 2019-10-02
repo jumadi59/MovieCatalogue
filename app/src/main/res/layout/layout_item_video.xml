@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:layout_marginBottom="5dp"
+    tools:background="#9e9e9e">
+
+    <com.google.android.youtube.player.YouTubeThumbnailView
+        android:id="@+id/youtube_thumb"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/video_loading"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/img_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_play_circle_outline_black_24dp"
+        tools:ignore="ContentDescription"
+        android:focusable="true" />
+
+</FrameLayout>

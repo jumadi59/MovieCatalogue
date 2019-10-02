@@ -1,0 +1,56 @@
+<resources>
+    <!-- Title Activity or Fragment -->
+    <string name="app_name">Movie Catalogue</string>
+    <string name="title_discover">Discover</string>
+    <string name="title_movies">Movies</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_upcoming">Up Coming</string>
+    <string name="title_search">Search</string>
+
+    <string name="overview">Storyline</string>
+    <string name="time_hour">h</string>
+    <string name="time_minute">m</string>
+    <string name="rate_dari">/5</string>
+    <string name="lang">(%s)</string>
+    <string name="full_cast">Full cast</string>
+    <string name="currently_airing">Airing</string>
+
+    <string name="poster_description">Poster</string>
+
+    <string name="undo">Undo</string>
+    <string name="msg_empty_data">Add your favorite %s</string>
+    <string name="success_add_favorite">Successfully added to the favorites list</string>
+    <string name="success_remove_favorite">Successfully deleted from the favorites list</string>
+    <string name="tray_again">Tray again</string>
+    <string name="error_msg">Sorry! Cloudn\'t fetch %s.</string>
+    <string name="tap_to_reload">Tap to reload</string>
+    <string name="msg_no_query">There are no %s that matched your query</string>
+    <string name="msg_search">Search %s</string>
+    <string name="error_msg_no_internet">Not connected to internet</string>
+    <string name="error_msg_initialize">For the first time the application is opened it must be connected to the internet</string>
+    <string name="see_more">See more</string>
+    <string name="category">Category</string>
+    <string name="title_home">Home</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="genre_action">Action</string>
+    <string name="genre_comedy">Comedy</string>
+    <string name="genre_horror">Horror</string>
+    <string name="genre_romance">Romance</string>
+    <string name="type_something">Type something</string>
+    <string name="title_account">Account</string>
+    <string name="casts">Casts</string>
+    <string name="trailer">Trailer</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="general_header">General</string>
+
+    <string name="region_title">Region</string>
+    <string name="include_adult_title">Include adult</string>
+    <string name="include_adult_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="include_adult_summary_off">Only download attachments when manually requested</string>
+    <string name="more">More</string>
+
+</resources>

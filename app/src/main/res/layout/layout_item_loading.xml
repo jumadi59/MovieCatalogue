@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/rotate_loading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:loading_width="4dp"
+        app:loading_color="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/content_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_horizontal"
+        android:paddingTop="@dimen/margin_horizontal"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:focusable="true">
+
+        <ImageButton
+            android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_horizontal"
+            android:layout_marginStart="@dimen/margin_horizontal"
+            android:background="@drawable/btn_retry_selector"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_refresh_black_24dp"
+            android:tint="@color/colorText"
+            android:tintMode="src_in"
+            tools:targetApi="lollipop"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_horizontal"
+            android:layout_marginStart="@dimen/margin_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_msg_error"
+                style="@style/TextContent.Bold"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="What went wrong"/>
+
+            <TextView
+                style="@style/TextContent.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tap_to_reload"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

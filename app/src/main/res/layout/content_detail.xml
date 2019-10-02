@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_overlapTop="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.detail.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_vertical_x"
+        android:layout_marginTop="15dp"
+        tools:visibility="visible">
+
+        <com.jumadi.moviecatalogue.utils.FlexLayout
+            android:id="@+id/flex_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/margin_horizontal_x"
+            android:paddingEnd="@dimen/margin_horizontal_x"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:partMain="@id/txt_title"
+            app:partSlave="@id/txt_runtime">
+
+            <TextView
+                android:id="@+id/txt_title"
+                style="@style/TextContent.Bold.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginEnd="@dimen/margin_horizontal"
+                tools:text="Dora and the Lost City of Gold" />
+
+            <TextView
+                android:id="@+id/txt_runtime"
+                style="@style/TextContent.Small2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_round"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@android:color/white"
+                tools:text="2h, 50m" />
+
+        </com.jumadi.moviecatalogue.utils.FlexLayout>
+
+        <TextView
+            android:id="@+id/txt_gendres"
+            style="@style/TextContent.Small2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_x"
+            android:layout_marginEnd="@dimen/margin_horizontal_x"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flex_layout"
+            tools:text="Adventure | Action | Fantasy" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rating_bar"
+            style="@style/Widget.RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_x"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.2"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_rate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_rate"
+            app:layout_constraintVertical_bias="0.81"
+            tools:rating="3.5" />
+
+        <TextView
+            android:id="@+id/txt_rate"
+            style="@style/TextContent.Bold.Big"
+            android:layout_marginTop="@dimen/margin_horizontal"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toEndOf="@+id/rating_bar"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gendres"
+            tools:text="3.5" />
+
+        <TextView
+            android:id="@+id/rate"
+            style="@style/TextContent.Small"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/margin_horizontal"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/txt_rate"
+            tools:text="@string/rate_dari" />
+
+        <TextView
+            android:id="@+id/txt_release_date"
+            style="@style/TextContent.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_rate"
+            app:layout_constraintEnd_toStartOf="@+id/txt_language"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rate"
+            app:layout_constraintTop_toTopOf="@+id/txt_rate"
+            app:layout_constraintVertical_bias="0.86"
+            tools:text="Jan 21, 2019" />
+
+        <TextView
+            android:id="@+id/txt_language"
+            style="@style/TextContent.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_horizontal_x"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_release_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_release_date"
+            tools:text="(USA)" />
+
+        <TextView
+            android:id="@+id/txt_description"
+            style="@style/TextContent.Value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_x"
+            android:layout_marginTop="@dimen/margin_horizontal"
+            android:layout_marginEnd="@dimen/margin_horizontal_x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_rate"
+            tools:text="As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain." />
+
+        <TextView
+            android:id="@+id/txt_full_cast"
+            style="@style/TextContent.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_x"
+            android:layout_marginTop="@dimen/margin_vertical_x"
+            android:text="@string/full_cast"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_description" />
+
+        <TextView
+            android:id="@+id/see_more_cast"
+            style="@style/TextContent.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_horizontal_x"
+            android:background="@drawable/btn_more_selector"
+            android:gravity="center"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/see_more"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_full_cast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_full_cast" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_casts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_full_cast"
+            tools:itemCount="10"
+            tools:listitem="@layout/layout_item_credit" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_casts"
+            tools:itemCount="10"
+            tools:listitem="@layout/layout_item_image"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txt_trailer"
+            style="@style/TextContent.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_x"
+            android:layout_marginTop="@dimen/margin_vertical_x"
+            android:text="@string/trailer"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_casts" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:itemCount="10"
+            tools:listitem="@layout/layout_item_video"
+            app:layout_constraintTop_toBottomOf="@+id/txt_trailer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
